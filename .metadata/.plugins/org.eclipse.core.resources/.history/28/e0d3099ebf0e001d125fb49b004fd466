@@ -1,0 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>${donut.name} Details</title>
+</head>
+<body>
+	<h1>Donut</h1>
+	Name: ${donut.name} <br>
+	Calories: ${donut.calories}<br>
+	Extras: <br>
+	<ul>
+		<c:forEach var="unit" items="${extras}">
+			<li>${unit}</li>
+		</c:forEach>
+	</ul>
+	<img src="${donut.photo}" alt="Photo of ${donut.name}">
+	<a href="/">Home</a>
+</body>
+</html>
